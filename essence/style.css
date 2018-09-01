@@ -1,3 +1,7 @@
+.logo-dimen {
+    width: 13rem;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
