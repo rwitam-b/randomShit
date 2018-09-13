@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
     'use strict';
 
     var $window = $(window);
@@ -10,30 +10,30 @@
 
     // :: Sliders Active Code
     if ($.fn.owlCarousel) {
-        /* $('.popular-products-slides').owlCarousel({
-             items: 4,
-             margin: 30,
-             loop: true,
-             nav: false,
-             dots: false,
-             autoplay: true,
-             autoplayTimeout: 5000,
-             smartSpeed: 1000,
-             responsive: {
-                 0: {
-                     items: 1
-                 },
-                 576: {
-                     items: 2
-                 },
-                 768: {
-                     items: 3
-                 },
-                 992: {
-                     items: 4
-                 }
-             }
-         });*/
+        $('.popular-products-slides').owlCarousel({
+            items: 4,
+            margin: 30,
+            loop: true,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            smartSpeed: 1000,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                576: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                992: {
+                    items: 4
+                }
+            }
+        });
         $('.product_thumbnail_slides').owlCarousel({
             items: 1,
             margin: 0,
@@ -55,15 +55,15 @@
     var cartOverlayOn = "cart-bg-overlay-on";
     var cartOn = "cart-on";
 
-    cartbtn1.on('click', function() {
+    cartbtn1.on('click', function () {
         cartOverlay.toggleClass(cartOverlayOn);
         cartWrapper.toggleClass(cartOn);
     });
-    cartOverlay.on('click', function() {
+    cartOverlay.on('click', function () {
         $(this).removeClass(cartOverlayOn);
         cartWrapper.removeClass(cartOn);
     });
-    cartbtn2.on('click', function() {
+    cartbtn2.on('click', function () {
         cartOverlay.removeClass(cartOverlayOn);
         cartWrapper.removeClass(cartOn);
     });
@@ -78,7 +78,7 @@
     }
 
     // :: Sticky Active Code
-    $window.on('scroll', function() {
+    $window.on('scroll', function () {
         if ($window.scrollTop() > 0) {
             $('.header_area').addClass('sticky');
         } else {
@@ -92,7 +92,7 @@
     }
 
     // :: Slider Range Price Active Code
-    $('.slider-range-price').each(function() {
+    $('.slider-range-price').each(function () {
         var min = jQuery(this).data('min');
         var max = jQuery(this).data('max');
         var unit = jQuery(this).data('unit');
@@ -105,7 +105,7 @@
             min: min,
             max: max,
             values: [value_min, value_max],
-            slide: function(event, ui) {
+            slide: function (event, ui) {
                 var result = label_result + " " + unit + ui.values[0] + ' - ' + unit + ui.values[1];
                 console.log(t);
                 t.closest('.slider-range').find('.range-price').html(result);
@@ -116,15 +116,15 @@
     // :: Favorite Button Active Code
     var favme = $(".favme");
 
-    favme.on('click', function() {
+    favme.on('click', function () {
         $(this).toggleClass('active');
     });
 
-    favme.on('click touchstart', function() {
+    favme.on('click touchstart', function () {
         $(this).toggleClass('is_animating');
     });
 
-    favme.on('animationend', function() {
+    favme.on('animationend', function () {
         $(this).toggleClass('is_animating');
     });
 
@@ -144,27 +144,8 @@
     }
 
     // :: PreventDefault a Click
-    $("a[href='#']").on('click', function($) {
+    $("a[href='#']").on('click', function ($) {
         $.preventDefault();
     });
-
-    function makeAjax(url, type) {
-        return $.ajax({
-            url: url,
-            type: type,
-            crossDomain: true,
-        });
-    }
-    // ## window functions ##
-
-    function makeAjax(url, type) {
-        return $.ajax({
-            url: url,
-            type: type,
-            crossDomain: true,
-        });
-    }
-
-    window.makeAjax = makeAjax;
 
 })(jQuery);
