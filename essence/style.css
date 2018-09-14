@@ -1,13 +1,102 @@
-    /* ####################################################
-    :: Template Name: Essence - Fashion Ecommerce Template
-    :: Author: Colorlib
-    :: Author URL: https://colorlib.com
-    :: Description: Essence is smart & elegant fashion e-commerce Template. It's suitable for all e-commerce business platform.
-    :: Version: 1.0.0
-    :: Created: April 27, 2018
-    :: Last Updated: May 2, 2018
-    #################################################### */
+.no-display {
+    display: none !important;
+}
 
-    /* ---------------------------------------
-    ##### - PLACE YOUR CUSTOM CSS HERE - #####
-    --------------------------------------- */
+.logo-dimen {
+    width: 13rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.coming-soon {
+    color: green;
+}
+
+.dropdown.cn-col-4 {
+    width: 14rem !important;
+}
+
+.single-product-wrapper .product-img img {
+    height: 26rem;
+}
+
+.single-image-item {
+    height: 88vh;
+    width: auto !important;
+    margin: 0 auto;
+}
+
+.product-images {
+    padding: 0 20px;
+}
+
+.map-image {
+    height: 100vh;
+}
+
+#scrollUp {
+    border-radius: 50px !important;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .logo-dimen {
+        width: 7rem;
+    }
+    .single_catagory_area {
+        margin-bottom: 1rem;
+    }
+    .single-image-item {
+        height: auto !important;
+    }
+}
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {}
+
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {}
+
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {}
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {}
